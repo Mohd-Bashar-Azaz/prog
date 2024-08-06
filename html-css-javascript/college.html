@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+marks :  <input type="text " id="id" >
+<button onclick=dota()>Submit </button>
+<div id="op"></div>
+</body>
+<script>
+function dota(){
+ let y = document.getElementById("id").value;
+ let grade ;
+ if(y>=80&&y<=100){
+    grade = "GRADE A";
+ }
+ else if(y>=60&&y<80){
+    grade = "GRADE B";
+ }
+ else if(y>=40&&y<60){
+    grade = "GRADE C";
+ }
+ else if(y<40){
+    grade = "FAIL";
+ }
+ else if(y>100){
+    grade = "YOU ARE A LEGEND";
+ }
+document.getElementById("op").innerHTML=grade;
+}
+
+</script>
+</html>
