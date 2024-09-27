@@ -1,5 +1,4 @@
-<!-- program-5: to dynamically blod,italic,underline words and phrases based on user action) -->
-
+<!-- program-4: to dynamically blod,italic,underline words and phrases based on user action) -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,13 +42,9 @@
             border: 1px solid #ddd;
             min-height: 50px;
             background-color: #fff;
-            overflow: auto;
-            /* Allows dynamic height adjustment */
-            transition: height 0.3s ease;
-            resize: none;
         }
 
-        /* Style for active buttons */
+        
         button.active {
             background-color: #007bff;
             color: #fff;
@@ -72,20 +67,14 @@
         <div id="output"></div>
     </div>
     <script>
-        // Get references to DOM elements
+        
         const textInput = document.getElementById('textInput');
         const boldButton = document.getElementById('boldButton');
         const italicButton = document.getElementById('italicButton');
         const underlineButton = document.getElementById('underlineButton');
         const output = document.getElementById('output');
 
-        // Function to dynamically adjust the output div height
-        function adjustHeight() {
-            output.style.height = 'auto'; // Reset height
-            output.style.height = `${output.scrollHeight}px`; // Adjust to fit content
-        }
-
-        // Function to update the output area with the text input
+        
         function updateOutput() {
             let formattedText = textInput.value;
 
@@ -100,28 +89,26 @@
             }
 
             output.innerHTML = formattedText;
-            adjustHeight(); // Adjust height after updating content
         }
 
-        // Function to toggle bold style
+       
         boldButton.addEventListener('click', () => {
             boldButton.classList.toggle('active');
             updateOutput();
         });
 
-        // Function to toggle italic style
+       
         italicButton.addEventListener('click', () => {
             italicButton.classList.toggle('active');
             updateOutput();
         });
 
-        // Function to toggle underline style
         underlineButton.addEventListener('click', () => {
             underlineButton.classList.toggle('active');
             updateOutput();
         });
 
-        // Update the output area when the user types in the text input
+       
         textInput.addEventListener('input', updateOutput);
     </script>
 </body>
