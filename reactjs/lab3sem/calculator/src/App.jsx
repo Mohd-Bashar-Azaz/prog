@@ -83,8 +83,7 @@ function App() {
             setCurrentValue(value);
             setWaitingForOperand(false);
         } else {
-            const newValue =
-                currentValue === '0' ? value : currentValue + value;
+            const newValue = currentValue === '0' ? value : currentValue + value;
             setDisplay(newValue);
             setCurrentValue(newValue);
         }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruits and Vegetables Loader</title>
+  <style>
+    /* Global styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      overflow: hidden;
+    }
+
+    /* Loader container */
+    #loader {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+    }
+
+    /* Image slider */
+    .image-slider {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .image-slider img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: contain;
+      opacity: 0;
+      animation: slide 3s forwards ; /* Set duration for faster transition */
+    }
+
+    /* Each image has a different animation delay to prevent overlapping */
+    .image-slider img:nth-child(1) { animation-delay: 0s; }/*BRO*/
+    .image-slider img:nth-child(2) { animation-delay: 1.001s; }/*SHOP*/
+    .image-slider img:nth-child(3) { animation-delay: 2.002s; }/*APPL*/
+    .image-slider img:nth-child(4) { animation-delay: 3.003s; }/*CARR*/
+    .image-slider img:nth-child(5) { animation-delay: 4.004s; }/*BANANA*/
+    .image-slider img:nth-child(6) { animation-delay: 5.005s; }/*SHOP*/
+    .image-slider img:nth-child(7) { animation-delay: 6.006s; }/*CABBAGE*/
+
+    /* Keyframes for the image slider */
+    @keyframes slide {
+      0%, 5% { opacity: 0; }        /* Fade out */
+      10%, 30% { opacity: 1; }      /* Fade in */
+      35%, 100% { opacity: 0; }     /* Fade out */
+    }
+
+    /* Dots loader */
+    .dots-loader {
+      display: flex;
+      align-items: center;
+    }
+
+    .dots-loader div {
+      width: 15px;
+      height: 15px;
+      margin: 0; /* Remove margin to eliminate space */
+      animation: blink 1.2s infinite; /* Animation duration adjusted for infinite effect */
+      color: #6cbd45; /* Green text for 'VEGINGO' */
+      font-weight: bold;
+      font-size: 20px;
+      opacity: 0; /* Initially hidden */
+    }
+
+    /* Staggered animation for VEGINGO letters */
+    .dots-loader div:nth-child(1) { animation-delay: 0.1s; }
+    .dots-loader div:nth-child(2) { animation-delay: 0.3s; }
+    .dots-loader div:nth-child(3) { animation-delay: 0.5s; }
+    .dots-loader div:nth-child(4) { animation-delay: 0.7s; }
+    .dots-loader div:nth-child(5) { animation-delay: 0.9s; }
+    .dots-loader div:nth-child(6) { animation-delay: 1.1s; }
+
+    /* Keyframes for blinking dots animation */
+    @keyframes blink {
+      0% { opacity: 0; }
+      25% { opacity: 1; } /* Fade in */
+      50% { opacity: 0.5; }
+      75% { opacity: 0.8; } /* Slight fade out */
+      100% { opacity: 0; } /* Fade out */
+    }
+
+    /* Main content (hidden initially) */
+    #content {
+      display: none;
+      text-align: center;
+    }
+
+    #content h1 {
+      color: #333;
+      font-size: 2.5rem;
+    }
+
+    #content p {
+      color: #666;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fruits and Vegetables Loader -->
+  <div id="loader">
+    <!-- Image slider for fruits and vegetables -->
+    <div class="image-slider">
+      <img src="loader/broccoli.png" alt="Broccoli">
+      <img src="loader/shopping-cart.png" alt="Shopping Cart">
+      <img src="loader/apple.png" alt="Apple">
+      <img src="loader/carrot.png" alt="Carrot">
+      <img src="loader/banana.png" alt="Banana">
+      <img src="loader/shopping-cart.png" alt="Shopp">
+      <img src="loader/cabbage.png" alt="Cabbage">
+      
+    </div>
+    <!-- Dots loader -->
+    <div class="dots-loader">
+      <div>V</div><div>E</div><div>G</div><div>I</div><div>N</div><div>G</div><div>O</div> <!-- No extra spaces between letters -->
+    </div>
+  </div>
+
+  <!-- Hidden content -->
+  <div id="content">
+    <h1>Welcome to the Fruits & Vegetables Page!</h1>
+    <p>Your content has successfully loaded.</p>
+  </div>
+
+  <script>
+    // Simulate content loading and show the actual content after 10 seconds
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        document.getElementById('loader').style.display = 'none'; // Hide loader
+        document.getElementById('content').style.display = 'block'; // Show content
+      }, 7000); // 10 seconds delay
+    });
+  </script>
+
+</body>
+</html>
