@@ -3,6 +3,7 @@
 let currentDate = new Date();
 let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 let dayOfWeek = days[currentDate.getDay()];
+
 let hours = currentDate.getHours();
 let minutes = currentDate.getMinutes(); 
 let seconds = currentDate.getSeconds();
