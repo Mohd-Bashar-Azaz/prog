@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <script>
-        // function isOdd(){
-        //     let n = prompt("Enter a number: ");
-        //     if(n%2==0){
-        //         alert("Even");
-        //     }else{
-        //         alert("Odd");
-        //     }
-        // }
-        // isOdd();
-        // console.log(isOdd());
-        function larger(a,b){
-            return a>b?a:b;
-        }
-        // larger();
-        console.log(larger(5,10));
-    </script>
-    
+    <div class="container">
+        <img src="pngegg.png" alt="img" class="border">
+        <div class="header">
+            <div class="header-left">
+                <img src="brand-logo.png" alt="logo">
+                <h1>Vegingo <span>team</span></h1>
+            </div>
+            <div class="header-right">
+                <span>INvoice </span>
+                <span>INV010112337378 </span>
+            </div>
+        </div>
+
+        <div class="billing-info">
+            <div class="billinginfo-left">
+                <h3>Billing Address</h3>
+                <span>New Lucknow Kitchen</span>
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span>Lorem ipsum dolor sit.</span>
+            </div>
+            <div class="billinginfo-right">
+                <h3>From</h3>
+                <span>Vegingo</span>
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span>Lorem ipsum dolor sit.</span>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="l-col">Lorem ipsum dolor</td><td>20</td><td>rs100</td><td class="r-col">Rs20000</td></tr>
+                <tr><td class="l-col">Lorem ipsum dolor</td><td>20</td><td>rs100</td><td class="r-col">Rs20000</td></tr>
+                <tr><td class="l-col">Lorem ipsum dolor</td><td>20</td><td>rs100</td><td class="r-col">Rs20000</td></tr>
+                <tr><td class="l-col">Lorem ipsum dolor</td><td>20</td><td>rs100</td><td class="r-col">Rs20000</td></tr>
+
+            </tbody>
+           
+        </table>
+        <div class="total-bx">
+            <div class="total-row"><span>Subtotal:</span><span>Rs 80000</span></div>
+            <div class="total-row"><span>Discount:</span><span> -Rs 2000</span></div>
+            <div class="total-row"><span>GrandTotal:</span><span>Rs 78000</span></div>
+<h1>this is</h1>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

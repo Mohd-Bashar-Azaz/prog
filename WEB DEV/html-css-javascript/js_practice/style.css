@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    background: #eeedf5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.container{
+    width:39%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 505px;
+    color: #333333;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.35);
+}
+.container .header{
+    position: relative;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 3% 10px;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.8);
+
+}
+.container .border{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.container .header .header-left{
+    display: flex;
+    align-items: center;
+}
+.container .header .header-left img{
+    width: 60px;
+    
+}
+.container .header .header-left h1{
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    color: #333333;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.container .header .header-left h1 span{
+    color: #8c8c8c;
+}   
+.container .header .header-right{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}   
+.container .header .header-right span:nth-child(1) {
+    font-size: 1.25rem;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+.container .header .header-right span:nth-child(2) {
+    color: 8c8c8c;
+   
+}
+.container .billing-info .billing-info-left,
+.container .billing-info .billing-info-right{
+   font-size: 0.95rem;
+   display: flex;
+   flex-direction: column;
+
+}
+.container .billing-info .billing-info-left span:nth-of-type(1),
+.container .billing-info .billing-info-right span:nth-of-type(1){
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+
+}
+
+.container .billing-info .billing-info-left span:nth-of-type(2),
+.container .billing-info .billing-info-left span:nth-of-type(3),
+.container .billing-info .billing-info-right span:nth-of-type(2),
+.container .billing-info .billing-info-right span:nth-of-type(3){
+    color: #8c8c8c;
+    font-size: 0.8rem;
+}
+
+table{
+    width: 90%;
+    border-collapse: collapse;
+    
+}
+table thead tr td{
+   background: #d6d6d6;
+   text-align: center;
+   font-weight: 700;
+   padding: 0.75rem;
+   font-size: 1rem;
+}
+
+table tbody tr td:nth-child(1){
+    text-align: left;
+}
+table tbody tr td:nth-child(4){
+    text-align: left;
+}
+table tbody td{
+    padding: 0.75rem;
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 0.8rem;
+
+}
+
+.l-col{
+    text-align: left;
+}
+.r-col{
+    text-align: right;
+}
+
+.total-bx{
+    margin-top: 0.8rem;
+    width: 90%;
+    border-top: 1px solid rgba(200, 200, 200, 0.8);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.8);
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.total-bx .total-row{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+}
+

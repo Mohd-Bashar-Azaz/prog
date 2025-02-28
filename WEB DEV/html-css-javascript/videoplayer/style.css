@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+  }
+  
+  #video_player {
+    position: relative;
+  }
+  
+  #main-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .controls-left,
+  .controls-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .controls-left .icon,
+  .controls-right .icon {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .volume input {
+    width: 100px;
+    margin-left: 5px;
+  }
+  
+  .timer {
+    margin-left: 10px;
+  }
+  
+  .progress-area {
+    width: 100%;
+    height: 5px;
+    background: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    margin: 10px 0;
+  }
+  
+  .progress-bar {
+    background: #fff;
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .settings {
+    display: none;
+  }
+  
+  .settings.show {
+    display: block;
+  }
+  
+  .settings .playback {
+    margin-top: 10px;
+  }
+  
+  .settings .playback span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .settings .playback ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .settings .playback li {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .settings .playback li.active {
+    font-weight: bold;
+  }
+  
